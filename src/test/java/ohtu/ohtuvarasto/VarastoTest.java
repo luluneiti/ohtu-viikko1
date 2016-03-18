@@ -66,13 +66,50 @@ public class VarastoTest {
     }
 
     @Test
+    public void laittaaLiikaa() {
+
+        varasto = new Varasto(5);
+        varasto.lisaaVarastoon(16);
+        //System.out.println("liikaa " + varasto.getSaldo());
+        assertEquals(5, 0, varasto.getSaldo());
+
+    }
+    
+    @Test
+    public void laittaaNeg() {
+
+        varasto = new Varasto(5);
+        varasto.lisaaVarastoon(-5);
+        assertEquals(0, 0, varasto.getSaldo());
+
+    }
+
+    @Test
+    public void ottaaLiikaa() {
+        varasto = new Varasto(5);
+        varasto.otaVarastosta(10);
+        assertEquals(0, 0, varasto.getSaldo());
+
+    }
+
+    @Test
+    public void ottaaNeg() {
+        varasto = new Varasto(5);
+        varasto.lisaaVarastoon(5);
+        double arvo = varasto.getSaldo();
+        varasto.otaVarastosta(-5);
+        assertEquals(arvo, varasto.getSaldo());
+
+    }
+
+    @Test
     public void konstr() {
         varasto = new Varasto(-1);
         varasto = new Varasto(0);
-        varasto = new Varasto(1,1);
-        varasto = new Varasto(1,2);
-        varasto = new Varasto(-1,2);
-        varasto = new Varasto(-1,-1);
+        varasto = new Varasto(1, 1);
+        varasto = new Varasto(1, 2);
+        varasto = new Varasto(-1, 2);
+        varasto = new Varasto(-1, -1);
         varasto.toString();
     }
 }
