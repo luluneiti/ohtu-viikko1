@@ -44,12 +44,17 @@ public class StaticsticsTest {
     public void setUp() {
         ArrayList<Player> players = new ArrayList<Player>();
 
-            players.add(new Player("Semenko", "EDM", 4, 12));
-            players.add(new Player("Lemieux", "PIT", 45, 54));
-            players.add(new Player("Kurri", "EDM", 37, 53));
-            players.add(new Player("Yzerman", "DET", 42, 56));
-            players.add(new Player("Gretzky", "EDM", 35, 89));
+        players.add(new Player("Semenko", "EDM", 4, 12));
+        players.add(new Player("Lemieux", "PIT", 45, 54));
+        players.add(new Player("Kurri", "EDM", 37, 53));
+        players.add(new Player("Yzerman", "DET", 42, 56));
+        players.add(new Player("Gretzky", "EDM", 35, 89));
         stats = new Statistics(readerStub, players);
+    }
+
+    @Test
+    public void toinenKons() {
+        Statistics stats = new Statistics(new PlayerReader("http://nhlstatistics.herokuapp.com/players.txt"));
     }
 
     @Test
