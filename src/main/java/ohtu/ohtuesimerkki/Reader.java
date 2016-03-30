@@ -1,5 +1,5 @@
 
-package ohtuesimerkki;
+package ohtu.ohtuesimerkki;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package ohtuesimerkki;
+package ohtu.ohtuesimerkki;
 
 public class Main {
     public static void main(String[] args) {
